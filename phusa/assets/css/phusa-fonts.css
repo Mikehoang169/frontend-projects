@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'GowunBatang-bold';
+    src: url('../webfonts/GowunBatang-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal; /* Change to 'normal' for normal fonts */
+}
+
+@font-face {
+    font-family: 'GowunBatang-normal'; /* You can name this font anything you like */
+    src: url('../webfonts/GowunBatang-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Girassol-normal'; /* You can name this font anything you like */
+    src: url('../webfonts/Girassol-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
