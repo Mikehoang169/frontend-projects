@@ -22,7 +22,7 @@
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/logo_phusa.png" alt="PHUSA Vietnamese Kitchen" /></a>
 					<ul id="menu-items" class="menu-items font-girrasol">
-						<li class="decor-li"><a class="menu-link" href="#main">Home</a></li>
+						<li class="decor-li"><a class="menu-link active" href="#main">Home</a></li>
 						<li class="decor-li"><a class="menu-link" href="#second">About Us</a></li>
 						<li class="decor-li"><a class="menu-link" href="#third">Our Favourite Picks</a></li>
 						<li class="decor-li"><a class="menu-link" href="#fourth">Contact Us</a></li>
@@ -283,9 +283,50 @@
 				integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow==" 
 				crossorigin="anonymous" referrerpolicy="no-referrer">
 			</script>
-		
+			<script>
+				
+			</script>
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
+
+					// Get references to your sections and menu links
+					const scrollContainer = document.getElementById("phusa-container");
+					const sections = document.querySelectorAll("section");
+					const menuLinks = document.querySelectorAll(".menu-link");
+					
+					// Initialize an array to store the heights of each section
+					const sectionHeights = [];
+					sections.forEach(section => {
+						sectionHeights.push(section.clientHeight);
+					});
+
+					// Add a scroll event listener
+					scrollContainer.addEventListener("scroll", function () {
+						// Get the current scroll position
+						const currentScrollPos = scrollContainer.scrollTop;
+
+						// Determine which section is in view based on cumulative heights
+						let totalHeight = 0;
+						let activeSectionIndex = -1;
+						
+						for (let i = 0; i < sectionHeights.length; i++) {
+							totalHeight += sectionHeights[i];
+							if ((currentScrollPos+50) < totalHeight) {
+								activeSectionIndex = i;
+								break;
+							}
+						}
+
+						// Update the active menu link
+						menuLinks.forEach((link, index) => {
+							if (index === activeSectionIndex) {
+								link.classList.add("active");
+							} else {
+								link.classList.remove("active");
+							}
+						});
+					});	
+					
 					var swiper = new Swiper(".dishSwiper", {
 						slidesPerView: 1,
 						spaceBetween: 20,
@@ -313,7 +354,7 @@
 							}
 						}
 					});
-					if (window.innerWidth < 980) {
+					if (window.innerWidth <= 980) {
 						var header = document.querySelector("#header");
 						var menu = document.querySelector("#header .menu-items");
 						var avatarLink = document.querySelector("a.image.avatar");
