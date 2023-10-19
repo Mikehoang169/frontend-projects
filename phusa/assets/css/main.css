@@ -2906,12 +2906,12 @@ input, select, textarea {
 			#second {
 				margin-left: 0em !important;
 				padding: 9em 2em 2em 2em !important;
-			
+				
 			}
 			#third {
 				margin-left: 0em !important;
 				padding: 9em 2em 2em 2em !important;
-			
+				
 			}
 			#fourth {
 				margin-left: 0em !important;
@@ -3031,15 +3031,16 @@ input, select, textarea {
 				padding: 8em 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
-			
+			#fourth {
+				padding: 8em 1.5em 2em 1.5em !important;
+				height: auto !important;
+			}
 			#phusa-container {
 				scroll-snap-type: none !important;
-				height: auto !important;
 			}
 			:root {
 				--about-us-card-height: calc((100vh - 3em - 123px) / 2) !important;
 			}
-			
 		/* Main */
 
 			#main {
@@ -3049,17 +3050,6 @@ input, select, textarea {
 				#main > section {
 					margin: 2.25em 0 0 0;
 					padding: 2.25em 0 0 0;
-				}
-
-		/* Poptrox */
-
-			.poptrox-popup {
-				border-radius: 0;
-			}
-
-				.poptrox-popup .nav-next:before,
-				.poptrox-popup .nav-previous:before {
-					margin-top: -1em;
 				}
 
 	}
