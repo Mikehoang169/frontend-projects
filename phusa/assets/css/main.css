@@ -974,11 +974,11 @@ input, select, textarea {
 
 				.row {
 					margin-top: 0;
-					margin-left: -2em;
+					
 				}
 
 					.row > * {
-						padding: 0 0 0 2em;
+						padding: 0 0 0 0.5em;
 					}
 
 					.row.gtr-uniform {
@@ -1219,11 +1219,11 @@ input, select, textarea {
 
 				.row {
 					margin-top: 0;
-					margin-left: -2em;
+					
 				}
 
 					.row > * {
-						padding: 0 0 0 2em;
+						padding: 0 0 0 0.5em;
 					}
 
 					.row.gtr-uniform {
@@ -2812,6 +2812,9 @@ input, select, textarea {
 				padding: 22% 10% 4em 10% !important;
 
 			}
+			.about-us h3 {
+				font-size: 22px !important;
+			}
 	}
 
 /* Medium */
@@ -2903,17 +2906,17 @@ input, select, textarea {
 			#second {
 				margin-left: 0em !important;
 				padding: 9em 2em 2em 2em !important;
-				height: auto !important;
+			
 			}
 			#third {
 				margin-left: 0em !important;
 				padding: 9em 2em 2em 2em !important;
-				height: auto !important;
+			
 			}
 			#fourth {
 				margin-left: 0em !important;
 				padding: 9em 2em 2em 2em !important;
-				height: auto !important;
+				
 			}
 			.shop-name {
 				display: none;
@@ -2921,11 +2924,9 @@ input, select, textarea {
 			.opening h1 {
 				display: block !important;
 			}
-			.about-us h3 {
-				font-size: 22px !important;
-			}
+			
 			.about-us p {
-				font-size: 14px !important;
+				font-size: 15px !important;
 			}
 			.favourite-pics h2{
 				font-size: 40px !important;
@@ -2943,7 +2944,10 @@ input, select, textarea {
 				padding: 10em 4em;
 				width: 100%;
 			}
-
+			:root {
+				--about-us-card-height: calc((100vh - 3em - 143px) / 2) !important;
+			}
+			
 	}
 
 /* Small */
@@ -3021,14 +3025,21 @@ input, select, textarea {
 			}
 			#second {
 				padding: 8em 1.5em 2em 1.5em !important;
+				height: auto !important;
 			}
 			#third {
 				padding: 8em 1.5em 2em 1.5em !important;
+				height: auto !important;
 			}
 			
 			#phusa-container {
 				scroll-snap-type: none !important;
+				height: auto !important;
 			}
+			:root {
+				--about-us-card-height: calc((100vh - 3em - 123px) / 2) !important;
+			}
+			
 		/* Main */
 
 			#main {
@@ -3110,6 +3121,9 @@ input, select, textarea {
 			.dish-list h2{
 				font-size: 30px !important;
 			}
+			:root {
+				--about-us-card-height: 408px !important;
+			}
 	}
 
 	#second {
@@ -3120,7 +3134,9 @@ input, select, textarea {
 		height: 100vh;
 		scroll-snap-align: start;
 		transition: opacity 0.5s;
-
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 		
 	#third {
@@ -3131,6 +3147,9 @@ input, select, textarea {
 		height:100vh;
 		scroll-snap-align: start;
 		transition: opacity 0.5s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		
 	}
 		#third > div {
@@ -3241,7 +3260,7 @@ input, select, textarea {
 		flex-direction: column;
 		align-items: center;
 		cursor: pointer;
-		width: 180px;
+		
 		height: 25vh;
 		justify-content: flex-end;
 	  }
@@ -3514,3 +3533,4 @@ input, select, textarea {
 		scroll-behavior: smooth;
 		
 	}
+	
