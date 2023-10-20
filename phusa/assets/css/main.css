@@ -3104,6 +3104,7 @@ input, select, textarea {
 		/* Extra */
 			.discover-button {	
 				height: 20vh!important;
+				justify-content: flex-start !important;
 			}
 			.opening {
 				padding: 25% 5% 4em 5% !important;
@@ -3262,7 +3263,6 @@ input, select, textarea {
 		flex-direction: column;
 		align-items: center;
 		cursor: pointer;
-		
 		height: 25vh;
 		justify-content: flex-end;
 	  }
@@ -3281,6 +3281,25 @@ input, select, textarea {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+	.discover-button .arrow-down {
+		transition: transform 0.3s ease;
+	}
+	
+	.discover-button:hover .arrow-down {
+		animation: bounce 1s infinite; /* Replace "bounce" with your animation name */
+	}
+	
+	@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(20px); /* Adjust the value for the desired bounce effect */
+		}
+		60% {
+			transform: translateY(10px); /* Adjust the value for the desired bounce effect */
+		}
 	}
 	.section-one {
 		display: flex;
