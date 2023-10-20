@@ -2842,7 +2842,7 @@ input, select, textarea {
 				top: auto;
 				width: 100%;
 				display: block;
-				padding: 0.5em 1.5em;
+				padding: 1em 1em;
 				z-index: 9999;
 			}
 
@@ -2860,7 +2860,22 @@ input, select, textarea {
 				}
 				#header .image.avatar {
 					margin: 0 0 0em 0;
-					width: 120px;
+					width: 60px;
+					display: flex;
+    				align-items: flex-start;
+				}
+				#header .menu.avatar {
+					margin: 0 0 0em 0;
+					height: 60px;
+					display: flex !important;
+    				align-items: flex-end;
+				}
+				#header .menubar {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					justify-content: space-between; /* This pushes the children to each end */
+    				align-items: center; /* Aligns vertically center if needed */
 				}
 			
 		/* Footer */
@@ -2905,17 +2920,17 @@ input, select, textarea {
 			}
 			#second {
 				margin-left: 0em !important;
-				padding: 9em 2em 2em 2em !important;
+				padding: 6em 2em 2em 2em !important;
 				
 			}
 			#third {
 				margin-left: 0em !important;
-				padding: 9em 2em 2em 2em !important;
+				padding: 6em 2em 2em 2em !important;
 				
 			}
 			#fourth {
 				margin-left: 0em !important;
-				padding: 9em 2em 2em 2em !important;
+				padding: 6em 2em 2em 2em !important;
 				
 			}
 			.shop-name {
@@ -3005,10 +3020,6 @@ input, select, textarea {
 					padding-top: 1.5em;
 					padding-bottom: 1.5em;
 				}
-				#header .image.avatar {
-					margin: 0 0 0em 0;
-					width: 100px;
-				}
 
 		/* Footer */
 
@@ -3024,15 +3035,15 @@ input, select, textarea {
 
 			}
 			#second {
-				padding: 8em 1.5em 2em 1.5em !important;
+				padding: 5em 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#third {
-				padding: 8em 1.5em 2em 1.5em !important;
+				padding: 5em 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#fourth {
-				padding: 8em 1.5em 2em 1.5em !important;
+				padding: 5em 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#phusa-container {
@@ -3061,7 +3072,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 0.5em 1.5em;
+				padding: 0.5em 1em;
 				position: fixed;
 				height: auto;
     			z-index: 9999;
@@ -3070,10 +3081,8 @@ input, select, textarea {
 				#header h1 ul br {
 					display: none;
 				}
-				#header .image.avatar {
-					margin: 0 0 0em 0;
-					width: 80px;
-				}
+			
+
 				#header .menu-items{
 					display:none;
 					padding-top: 1.5em;
@@ -3100,10 +3109,13 @@ input, select, textarea {
 				padding: 25% 5% 4em 5% !important;
 			}
 			#second {
-				padding: 6.5em 1em 2em 1em !important;
+				padding: 4.5em 1em 2em 1em !important;
 			}
 			#third {
-				padding: 6.5em 1em 2em 1em !important;
+				padding: 4.5em 1em 2em 1em !important;
+			}
+			#fourth {
+				padding: 4.5em 1em 2em 1em !important;
 			}
 			.favourite-pics h2{
 				font-size: 30px !important;
@@ -3353,7 +3365,7 @@ input, select, textarea {
 	.about-us.slide-4 {
 		background-image: url("../../images/patterns/non.png"),url("../../images/patterns/chaotom.png"), url("../../images/patterns/banhmi.png");
 		background-size:auto;
-		background-position: top 22% right 35%,							bottom  -20% left,							bottom -10% right;
+		background-position: top 22% right 35%,							bottom  -30% left,							bottom -15% right;
 		background-repeat: no-repeat,							no-repeat,								no-repeat;
 	}
 	.about-us h3 {
@@ -3523,4 +3535,8 @@ input, select, textarea {
 		scroll-behavior: smooth;
 		
 	}
-	
+	#header .menu.avatar {
+		display: none;
+
+	}
+
