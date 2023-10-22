@@ -3,7 +3,104 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+document.addEventListener("DOMContentLoaded", function() {
 
+	// Get references to your sections and menu links
+	const scrollContainer = document.getElementById("phusa-container");
+	const sections = document.querySelectorAll("section");
+	const menuLinks = document.querySelectorAll(".menu-link");
+	
+	// Initialize an array to store the heights of each section
+	const sectionHeights = [];
+	sections.forEach(section => {
+		sectionHeights.push(section.clientHeight);
+	});
+
+	// Add a scroll event listener
+	scrollContainer.addEventListener("scroll", function () {
+		// Get the current scroll position
+		const currentScrollPos = scrollContainer.scrollTop;
+
+		// Determine which section is in view based on cumulative heights
+		let totalHeight = 0;
+		let activeSectionIndex = -1;
+		
+		for (let i = 0; i < sectionHeights.length; i++) {
+			totalHeight += sectionHeights[i];
+			if ((currentScrollPos+50) < totalHeight) {
+				activeSectionIndex = i;
+				break;
+			}
+		}
+
+		// Update the active menu link
+		menuLinks.forEach((link, index) => {
+			if (index === activeSectionIndex) {
+				link.classList.add("active");
+			} else {
+				link.classList.remove("active");
+			}
+		});
+	});	
+	
+	var swiper = new Swiper(".dishSwiper", {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			481: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			737: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			981: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1281:
+			{
+				slidesPerView: 4,
+				spaceBetween: 20,
+			}
+		}
+	});
+	if (window.innerWidth <= 980) {
+		var header = document.querySelector("#header");
+		var menu = document.querySelector("#header .menu-items");
+		var avatarLink = document.querySelector("a.menu.avatar");
+
+		// Function to close the menu
+		function closeMenu() {
+			menu.style.display = "none";
+			header.classList.remove("expanded");
+		}
+
+		// Event listener for the avatar link
+		avatarLink.addEventListener("click", function(event) {
+			event.preventDefault(); // Prevents the default action of the anchor tag.
+			if (menu.style.display === "none" || menu.style.display === "") {
+				menu.style.display = "block";
+				header.classList.add("expanded");
+			} else {
+				closeMenu();
+			}
+		});
+
+		// Event listener for clicks outside the header
+		document.addEventListener("click", function(event) {
+			var target = event.target;
+			if (!header.contains(target) || target.tagName === 'A') {
+				closeMenu();
+			}
+		});
+	}
+});
 (function($) {
 
 	var $window = $(window),
