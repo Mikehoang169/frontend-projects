@@ -2628,7 +2628,7 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.5);*/
 		height: 100%;
 		left: 0;
-		padding: 3em 0em 3em 0em;
+		padding: 3em 0em 0.75em 0em;
 		position: fixed;
 		text-align: center;
 		top: 0;
@@ -2692,7 +2692,7 @@ input, select, textarea {
 		#footer .copyright li {
 			border-left: solid 1px rgba(255, 255, 255, 0.25);
 			display: inline-block;
-			line-height: 1em;
+			line-height: 0.75em;
 			margin-left: 0.75em;
 			padding-left: 0.75em;
 		}
@@ -2790,7 +2790,7 @@ input, select, textarea {
 			#footer .copyright li {
 				border-left-width: 0;
 				display: block;
-				line-height: 2.25em;
+				line-height: 0.75em;
 				margin-left: 0;
 				padding-left: 0;
 			}
@@ -2920,17 +2920,17 @@ input, select, textarea {
 			}
 			#second {
 				margin-left: 0em !important;
-				padding: 6em 2em 2em 2em !important;
+				padding: 92px 2em 2em 2em !important;
 				
 			}
 			#third {
 				margin-left: 0em !important;
-				padding: 6em 2em 2em 2em !important;
+				padding: 92px 2em 2em 2em !important;
 				
 			}
 			#fourth {
 				margin-left: 0em !important;
-				padding: 6em 2em 2em 2em !important;
+				padding: 92px 2em 2em 2em !important;
 				
 			}
 			.shop-name {
@@ -3035,15 +3035,15 @@ input, select, textarea {
 
 			}
 			#second {
-				padding: 5em 1.5em 2em 1.5em !important;
+				padding: 76px 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#third {
-				padding: 5em 1.5em 2em 1.5em !important;
+				padding: 76px 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#fourth {
-				padding: 5em 1.5em 2em 1.5em !important;
+				padding: 76px 1.5em 2em 1.5em !important;
 				height: auto !important;
 			}
 			#phusa-container {
@@ -3318,7 +3318,7 @@ input, select, textarea {
 	}
 	.order-btn-div {
 		width: 90%;
-		height: 25vh;
+		height: 20vh;
 		background-image: url('../../images/patterns/pattern-1.png'); /* Replace with your arrow image */
 		background-size: cover;
 		background-position: center;
